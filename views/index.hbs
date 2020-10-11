@@ -1,0 +1,28 @@
+<div class="container">
+    <h1 class="text-center mt-3">To Do App</h1>
+    <div class="row m-4">
+        <form action="/add-task" method="POST">
+            <label for="task">Enter Task:</label>
+            <input type="text" name="task" style="height: 50px; width: 400px;">
+            <button type="submit" class="btn btn-primary ml-2">Add Task</button>
+        </form>
+    </div>
+    <hr>
+    <h2 class="text-center">Tasks</h2>
+    <div class="row">
+        {{#each tasks}}
+        <div class="col-md-3 m-2">
+            <div class="card m-4" style="width: 18rem;">
+                <div class="card-body">
+                    <p class="card-text">{{this.task}}</p>
+                    <a href="/delete-task/{{this._id}}" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+
+    </div>
+
+
+</div>
