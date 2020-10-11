@@ -1,3 +1,3 @@
 # to-do-app
-A simple to do application
+A simple to do application,
 HASP bootcamp 
